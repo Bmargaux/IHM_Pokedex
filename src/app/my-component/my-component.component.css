@@ -1,0 +1,63 @@
+.backgris{
+    background: #D8D8D8
+}
+
+
+.example-card {
+    max-width: 300px;
+}
+
+.color{
+    color: black;
+    font: bold;
+}
+
+.body {
+    /* background-image: url("http://66.media.tumblr.com/tumblr_m9a6eqNYze1qfqgb9o1_500.gif"); */
+    /* background-image: url("http://i.imgur.com/O7ZWigt.png"); */
+    background-color: rgb(209, 225, 240);
+    
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+   }
+
+   .titre {
+    /* background-image: url("http://66.media.tumblr.com/tumblr_m9a6eqNYze1qfqgb9o1_500.gif"); */
+    /* background-image: url("http://i.imgur.com/O7ZWigt.png"); */
+    background-color: rgb(225, 83, 83);
+    
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+   }
+
+   mat-card-subtitle::first-letter {
+    color: white;
+    font-size: 130%;
+    font: small-caps bold 24px/1 sans-serif;
+    font-style: italic;
+  }
+  
+
+
+  p.b {
+    text-align: left;
+  }
+
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: rgb(225, 83, 83);
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+}
+
+.backB{
+    background: rgb(225, 83, 83);
+}
+

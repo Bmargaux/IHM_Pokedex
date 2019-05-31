@@ -1,0 +1,74 @@
+
+<mat-card class="example-card body"  style="font: small-caps bold 24px/1 sans-serif">
+    <mat-card-header class="titre">
+      <mat-card-title class="color">{{id}}</mat-card-title>
+      <mat-card-subtitle class="color">{{name}}</mat-card-subtitle>
+    </mat-card-header>
+    <br>
+
+    <mat-card-content class="body">
+        <p class="b color">Type :</p>
+
+        <div style="text-align: left">
+            <img *ngFor="let type of types" [src]="onGetImageType(type)" style="margin-left: 1ch"/>
+         </div>
+        
+
+        <p class="b color">Weight : {{poids}}</p>
+        <p class="b color">Height : {{taille}}</p>
+        
+      </mat-card-content>
+
+    <p-carousel circular="circular" autoplayInterval="5000" numVisible="1" headerText="Photos :" [value]="photos">
+        <ng-template let-photo pTemplate="item">
+            <div class="ui-grid ui-grid-responsive">
+                <div class="ui-grid-row">
+                    <div style="background-color: rgb(209, 225, 240)" class="ui-grid-col-12"><img [src]="photo.valeur" width="60"></div>
+                </div>
+                <div class="ui-grid-row" style="margin-left: auto; margin-right: auto; display: block; text-align: center; background-color: rgb(209, 225, 240)">
+                    <p>
+                        {{name}} {{photo.type}}
+                    </p>
+                  
+                </div>
+            </div>
+        </ng-template>
+
+    </p-carousel>
+
+    
+
+
+    <p-dialog style="font: small-caps bold 24px/1 sans-serif" header={{name}} [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '350px', minWidth: '200px'}" [minY]="70" 
+    [maximizable]="true" [baseZIndex]="10000">
+    
+    <div>
+        <p >Type :</p>
+        <img *ngFor="let type of types" [src]="onGetImageType(type)" style="margin-left: 1ch"/>
+     </div>
+
+
+    <img [src] = onGetImage()>
+    <p style="text-align: left">Weight : {{ poids}}</p>
+    <p style="text-align: left">Height : {{ taille}}</p>
+    <br>
+
+    
+        <div *ngFor="let stat of stats">
+            <p style="text-align: left"> {{ stat.type }} : {{stat.valeur}} </p>
+            <mat-progress-bar color:red mode="determinate" value={{stat.valeur}}></mat-progress-bar>
+            
+
+        </div>
+    
+
+    <p-footer>
+        
+    </p-footer>
+</p-dialog>
+
+<button mat-button style="margin-top: 1ch" class="backB" (click)="showDialog()" label="Show" >More information</button>
+
+  </mat-card>
+
+  <br>

@@ -1,0 +1,46 @@
+
+  .global {
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
+    text-align:center;
+ 
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+ 
+  }
+
+  .back {
+    background-color: #272622;
+    
+   }
+
+   .example-card {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(225, 83, 83);
+  }
+
+  .backin{
+    background-color: rgb(225, 83, 83);
+    
+  }
+
+  .backB{
+    background-color:  #E4E8EB;
+    
+  }
+
+  .backMore{
+    background-color:  rgb(225, 83, 83);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
